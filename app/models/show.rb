@@ -5,7 +5,7 @@ class Show < ActiveRecord::Base
   end
   
   def self.most_popular_show
-    self.all.order(rating: :desc).limit(1)
+    self.all.order(rating: :desc).limit(1).flatten
   end
   
   
